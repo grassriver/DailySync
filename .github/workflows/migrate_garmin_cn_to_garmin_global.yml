@@ -1,7 +1,10 @@
 name: Migrate Garmin CN to Garmin Global
 
- #on:
-   #workflow_dispatch:
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:  # <--- 添加这一行
+  
 env:
   BARK_KEY: ${{ secrets.BARK_KEY }}
   GARMIN_USERNAME: ${{ secrets.GARMIN_USERNAME }}
